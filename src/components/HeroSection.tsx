@@ -28,13 +28,13 @@ const HeroSection = () => {
           
           <div className="flex flex-col sm:flex-row gap-4">
             <Button variant="hero" size="lg" className="text-lg px-8 py-4">
-              <Phone className="mr-2 h-5 w-5" />
-              Book a Free Consultation
+              {/* <Phone className="mr-2 h-5 w-5" /> */}
+              Book Consultation
             </Button>
-            <Button variant="minimal" size="lg" className="text-lg px-8 py-4 bg-white/10 backdrop-blur border-white/30 text-white hover:bg-white hover:text-primary">
+            {/* <Button variant="minimal" size="lg" className="text-lg px-8 py-4 bg-white/10 backdrop-blur border-white/30 text-white hover:bg-white hover:text-primary">
               Explore Buy & Sell
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>
