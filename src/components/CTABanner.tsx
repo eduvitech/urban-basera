@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 const CTABanner = () => {
   return (
-    <section className="section-padding bg-gradient-primary relative overflow-hidden">
+    <section id="contact" className="section-padding bg-gradient-primary relative overflow-hidden">
       {/* Decorative Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-20 h-20 border-2 border-white rounded-full"></div>

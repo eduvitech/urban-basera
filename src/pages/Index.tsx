@@ -1,7 +1,6 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import WhyChooseUs from "@/components/WhyChooseUs";
-import DesignShowcase from "@/components/DesignShowcase";
+import InteriorShowcase from "@/components/InteriorShowcase";
 import ProcessSection from "@/components/ProcessSection";
 import PropertyServices from "@/components/PropertyServices";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -10,12 +9,11 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen scroll-smooth">
       <Header />
       <main>
         <HeroSection />
-        <WhyChooseUs />
-        <DesignShowcase />
+        <InteriorShowcase />
         <ProcessSection />
         <PropertyServices />
         <TestimonialsSection />

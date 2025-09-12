@@ -11,11 +11,53 @@ const Header = () => {
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#interiors" className="text-foreground hover:text-accent transition-colors">Interiors</a>
-            <a href="#work" className="text-foreground hover:text-accent transition-colors">Our Work</a>
-            <a href="#properties" className="text-foreground hover:text-accent transition-colors">Properties</a>
-            <a href="#about" className="text-foreground hover:text-accent transition-colors">About</a>
-            <Button variant="elegant" size="sm">
+            <a 
+              href="#interiors" 
+              className="text-foreground hover:text-accent transition-colors cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('interiors')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Interiors
+            </a>
+            <a 
+              href="#process" 
+              className="text-foreground hover:text-accent transition-colors cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('process')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Process
+            </a>
+            <a 
+              href="#properties" 
+              className="text-foreground hover:text-accent transition-colors cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('properties')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Properties
+            </a>
+            <a 
+              href="#testimonials" 
+              className="text-foreground hover:text-accent transition-colors cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              About
+            </a>
+            <Button 
+              variant="elegant" 
+              size="sm"
+              onClick={() => {
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Book Consultation
             </Button>
           </nav>

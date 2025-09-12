@@ -128,6 +128,10 @@ All colors MUST be HSL.
     @apply bg-background text-foreground font-sans antialiased;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   /* Typography */
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
@@ -186,5 +190,24 @@ All colors MUST be HSL.
   .image-overlay::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10;
+  }
+
+  /* Masonry Grid Enhancement */
+  .masonry-grid {
+    column-gap: 1.5rem;
+  }
+
+  /* Lightbox Animations */
+  .lightbox-enter {
+    @apply animate-fade-in;
+  }
+
+  .lightbox-exit {
+    @apply animate-fade-out;
+  }
+
+  /* Zoom Hover Effect */
+  .zoom-hover {
+    @apply transition-transform duration-500 ease-out hover:scale-110;
   }
 }
