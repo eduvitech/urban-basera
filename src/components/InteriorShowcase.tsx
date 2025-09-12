@@ -25,12 +25,8 @@ const interiorProjects = [
     image: cozyBedroom,
     description: "A serene bedroom retreat designed for ultimate relaxation and style."
   },
-  {
-    id: 4,
-    title: "Luxury Office Corner",
-    image: luxuryOffice,
-    description: "A sophisticated workspace that inspires productivity and creativity."
-  }
+
+
 ];
 
 const InteriorShowcase = () => {
