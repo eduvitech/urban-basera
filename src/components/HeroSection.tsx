@@ -4,6 +4,7 @@ import heroImage from "@/assets/hero-interior.jpg"; // fallback poster
 
 import houseVideo1 from "@/assets/videos/house.mp4";
 import houseVideo2 from "@/assets/videos/house1.mp4";
+import DesignVideo from "@/assets/videos/design/design.mp4";
 
 import { redirectWhatsApp } from "@/shared/helper";
 
@@ -16,8 +17,9 @@ type VideoItem = {
 };
 
 const videoPlaylist: VideoItem[] = [
-    { src: houseVideo1, type: "video/mp4" },
-    { src: houseVideo2, type: "video/mp4" },
+    // { src: houseVideo1, type: "video/mp4" },
+    // { src: houseVideo2, type: "video/mp4" },
+    { src: DesignVideo, type: "video/mp4" },
 ];
 
 const HeroSection = () => {

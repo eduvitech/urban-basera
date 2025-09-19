@@ -1,5 +1,5 @@
 import HeroSection from "@/components/HeroSection";
-import InteriorShowcase from "@/components/InteriorShowcase";
+import UrbanBaseraServices from "@/components/ub-services/services";
 import ProcessSection from "@/components/ProcessSection";
 import PropertyServices from "@/components/PropertyServices";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -9,9 +9,9 @@ const Index = () => {
   return (
     <>
       <HeroSection />
-      <InteriorShowcase />
+      <UrbanBaseraServices />
       <ProcessSection />
-      <PropertyServices />
+      {/* <PropertyServices /> */}
       <TestimonialsSection />
       <CTABanner />
     </>
