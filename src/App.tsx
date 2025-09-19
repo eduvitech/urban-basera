@@ -11,6 +11,7 @@ import DesignPage from "./pages/design/designPage";
 import BuyPage from "./pages/buy/BuyPage";
 import SellPage from "./pages/sell/sellPage";
 import AboutPage from "./pages/about/about";
+import ScrollToTop from "./util/scroll-top/ScrollTop";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Layout>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/testimonials" element={<TestimonialsPage />} />
