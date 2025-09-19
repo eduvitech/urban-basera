@@ -52,6 +52,7 @@ const UrbanBaseraServices = () => {
   return (
     <section id="services" className="section-padding bg-gradient-subtle">
       <div className="max-w-7xl mx-auto container-padding">
+        {/* Header */}
         <header className="text-center mb-14">
           <h2 className="display-text mb-3">Our Services</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -62,7 +63,7 @@ const UrbanBaseraServices = () => {
           </p>
         </header>
 
-        {/* 3-up card grid */}
+        {/* Services grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map(({ id, title, tagline, description, href, image, Icon }) => (
             <Link
@@ -70,23 +71,28 @@ const UrbanBaseraServices = () => {
               to={href}
               aria-label={title}
               className="group block focus:outline-none"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} // ✅ scroll reset
               data-ub-click={id}
             >
               <article
                 className="overflow-hidden rounded-lg bg-card border border-border shadow-soft hover-lift
                            focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2
-                           focus-visible:ring-offset-background"
+                           focus-visible:ring-offset-background transition"
               >
+                {/* Image wrapper */}
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <img
                     src={image}
                     alt={title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 transform-gpu"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+                  {/* Gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
                 </div>
 
+                {/* Text content */}
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-2">
                     <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-primary text-accent-foreground shadow-[0_0_0_4px_hsl(var(--accent)/0.12)]">
@@ -96,7 +102,9 @@ const UrbanBaseraServices = () => {
                   </div>
 
                   <p className="text-sm font-medium text-foreground mb-2">{tagline}</p>
-                  <p className="text-sm text-muted-foreground">{description}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {description}
+                  </p>
                 </div>
               </article>
             </Link>

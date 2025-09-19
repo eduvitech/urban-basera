@@ -1,9 +1,8 @@
 import { ListChecks, Camera, Handshake, FileSignature, LifeBuoy } from "lucide-react";
 import { redirectWhatsApp } from "@/shared/helper";
 
-// Using your existing default images as placeholders for now
-import card1 from "@/assets/elegant-kitchen.jpg";
-import card2 from "@/assets/cozy-bedroom.jpg";
+import card1 from "@/assets/services/sell/sell1.jpg";
+import card2 from "@/assets/services/sell/sell2.jpg";
 
 type Step = {
   step: string;
@@ -55,12 +54,11 @@ const SellPage = () => {
     <main className="bg-background text-foreground">
       {/* Intro */}
       <section className="section-padding text-center max-w-3xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">
-          Sell with Urban Basera
-        </h1>
+        <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">Sell with Urban Basera</h1>
         <p className="text-lg md:text-xl text-muted-foreground mb-8">
-          Selling your property should be simple, transparent, and rewarding.  
-          At Urban Basera, we combine local expertise with modern marketing to help you sell faster and at the right value—while making the journey stress-free.
+          Selling your property should be simple, transparent, and rewarding. At Urban Basera, we combine local
+          expertise with modern marketing to help you sell faster and at the right value—while making the journey
+          stress-free.
         </p>
         <button
           onClick={() => redirectWhatsApp()}
@@ -73,53 +71,71 @@ const SellPage = () => {
       {/* Steps */}
       <section className="section-padding bg-gradient-subtle">
         <div className="max-w-7xl mx-auto container-padding">
-          <h2 className="text-center text-3xl md:text-4xl font-serif mb-12">
-            A Clear 5-Step Selling Journey
-          </h2>
+          <h2 className="text-center text-3xl md:text-4xl font-serif mb-12">A Clear 5-Step Selling Journey</h2>
+
           <div
             className="
               lg:grid lg:grid-cols-5 lg:gap-6
-              flex gap-4 overflow-x-auto snap-x snap-mandatory
-              -mx-4 px-4
+              -mx-4 px-4 flex gap-4 overflow-x-auto snap-x snap-mandatory
               [scrollbar-width:none] [-ms-overflow-style:none]
             "
           >
+            <style>{`#sell-steps .scroll-hide::-webkit-scrollbar{display:none;}`}</style>
+
             {sellSteps.map(({ step, title, description, Icon }) => (
               <article
                 key={step}
                 className="
-                  snap-start min-w-[260px] sm:min-w-[300px] lg:min-w-0
-                  flex flex-col rounded-xl border border-border bg-card shadow-soft
-                  hover:shadow-lg hover:-translate-y-1 transition
+                  scroll-hide snap-start
+                  min-w-[260px] sm:min-w-[300px] lg:min-w-0
+                  h-full rounded-xl border border-border bg-card shadow-soft hover:shadow-lg hover:-translate-y-0.5 transition
+                  flex flex-col
                 "
               >
-                <div className="p-6 flex flex-col flex-1">
-                  <div className="flex items-center gap-3 mb-4">
+                {/* Top row: icon + title with fixed heights so cards match */}
+                <div className="p-6 pb-4">
+                  <div className="flex items-start gap-3">
                     <span
-                      className="inline-flex size-12 items-center justify-center rounded-full text-accent-foreground"
+                      className="inline-flex items-center justify-center rounded-full text-accent-foreground shrink-0"
                       style={{
-                        boxShadow: "0 0 0 6px hsl(var(--accent) / 0.15)",
+                        width: 44,
+                        height: 44,
                         background: "var(--gradient-primary)" as any,
+                        boxShadow: "0 0 0 6px hsl(var(--accent) / 0.15)",
                       }}
                     >
-                      <Icon className="h-5 w-5" />
+                      <Icon className="h-5 w-5" aria-hidden="true" />
                     </span>
-                    <h3 className="text-lg sm:text-xl font-serif font-semibold leading-tight">
+
+                    {/* Title gets a consistent height (2 lines max) */}
+                    <h3
+                      className="
+                        text-lg sm:text-xl font-serif font-semibold leading-tight
+                        line-clamp-2 min-h-[3.2rem]  /* ~2 lines with leading-tight */
+                      "
+                    >
                       {title}
                     </h3>
                   </div>
-                  <p className="text-sm text-muted-foreground flex-1">{description}</p>
                 </div>
+
+                {/* Description fills remaining space but is clamped to avoid stretching */}
+                <div className="px-6 pb-6 flex-1">
+                  <p className="text-sm text-muted-foreground leading-relaxed line-clamp-4">
+                    {description}
+                  </p>
+                </div>
+
+                {/* Baseline accent always aligned because article is flex-col h-full */}
                 <div className="h-[3px] w-full bg-gradient-primary" />
               </article>
             ))}
           </div>
-
         </div>
       </section>
 
       {/* Why Choose Us */}
-      <section className="section-padding">
+      {/* <section className="section-padding">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
           <div className="rounded-xl border border-border bg-card p-6 shadow-soft hover:shadow-md transition">
             <h3 className="text-xl font-serif mb-2">Maximum Exposure</h3>
@@ -134,7 +150,7 @@ const SellPage = () => {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Imagery */}
       <section className="section-padding bg-muted">
@@ -150,12 +166,8 @@ const SellPage = () => {
 
       {/* Final CTA */}
       <section className="section-padding bg-gradient-primary text-accent-foreground text-center">
-        <h2 className="text-3xl md:text-4xl font-serif mb-4">
-          Ready to Sell Your Property?
-        </h2>
-        <p className="mb-6 text-lg opacity-90">
-          Let’s maximize your property’s value and close the deal with ease.
-        </p>
+        <h2 className="text-3xl md:text-4xl font-serif mb-4">Ready to Sell Your Property?</h2>
+        <p className="mb-6 text-lg opacity-90">Let’s maximize your property’s value and close the deal with ease.</p>
         <button
           onClick={() => redirectWhatsApp()}
           className="inline-flex px-8 py-4 bg-white text-accent rounded-lg font-semibold hover:opacity-90 transition"
