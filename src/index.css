@@ -26,9 +26,9 @@ All colors MUST be HSL.
 
     --muted: 36 20% 88%;
     --muted-foreground: 0 0% 40%;
-
-    --accent: 8 48% 47%; /* Rust Red #b6483d */
-    --accent-foreground: 36 31% 94%;
+    
+    --accent: 8 48% 57%;  /* Rust Red Lighter */
+    --accent-foreground: 36 31% 96%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 36 31% 94%;
@@ -38,7 +38,7 @@ All colors MUST be HSL.
     --ring: 0 0% 0%;
 
     /* Brand Accent Colors */
-    --rust-red: 8 48% 47%; /* #b6483d */
+    --rust-red: 8 48% 57%;  /* Rust Red Lighter */
     --golden-sand: 42 59% 56%; /* #d8a44a */
     --orange-flower: 22 79% 52%; /* #e86d1f */
 
