@@ -2,59 +2,62 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Priya Sharma",
-    role: "Homeowner",
-    content: "Urban Basera transformed my flat into a luxury space. The attention to detail and understanding of my style was exceptional. Loved every aspect of the process!",
+    name: "Mr. Amit",
+    role: "Homebuyer",
+    content:
+      "Urban Basera made my first home-buying journey stress-free. From shortlisting to final paperwork, their team was supportive at every step. I felt confident and cared for throughout the process.",
     rating: 5,
-    avatar: "PS"
+    avatar: "AM",
   },
   {
-    name: "Rajesh Kumar", 
-    role: "Property Investor",
-    content: "Not only did they help me find the perfect property, but their interior design made it a stunning investment. The ROI exceeded all expectations.",
+    name: "Mr. Jayram",
+    role: "Property Seller",
+    content:
+      "I was worried about selling my property in time, but Urban Basera handled everything—marketing, negotiations, and documentation. They got me the right value without any hassle. Truly a professional experience.",
     rating: 5,
-    avatar: "RK"
+    avatar: "JR",
   },
-  {
-    name: "Anita Patel",
-    role: "Business Owner", 
-    content: "The team's expertise in both design and property services made our office relocation seamless. Professional, creative, and results-driven.",
-    rating: 5,
-    avatar: "AP"
-  }
 ];
 
 const TestimonialsSection = () => {
   return (
     <section id="testimonials" className="section-padding bg-gradient-subtle">
-      <div className="max-w-7xl mx-auto container-padding">
+      <div className="max-w-5xl mx-auto container-padding">
         <div className="text-center mb-16">
           <h2 className="display-text mb-4">What Our Clients Say</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Hear from satisfied clients who trusted us with their most important spaces.
+            Hear from our happy clients who trusted us with their most important journeys.
           </p>
         </div>
-        
-        <div className="grid md:grid-cols-3 gap-8">
+
+        <div className="grid md:grid-cols-2 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-card border border-border rounded-lg p-6 hover-lift">
+            <div
+              key={index}
+              className="bg-card border border-border rounded-xl p-6 shadow-soft hover:shadow-lg transition hover:-translate-y-1"
+            >
               <div className="flex items-center mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 text-golden-sand fill-current" />
+                  <Star
+                    key={i}
+                    className="h-5 w-5 text-yellow-500 fill-current"
+                  />
                 ))}
               </div>
-              
+
               <p className="text-foreground mb-6 leading-relaxed italic">
                 "{testimonial.content}"
               </p>
-              
+
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white font-medium mr-4">
+                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white font-semibold mr-4">
                   {testimonial.avatar}
                 </div>
                 <div>
                   <div className="font-medium text-foreground">{testimonial.name}</div>
-                  <div className="text-sm text-muted-foreground">{testimonial.role}</div>
+                  <div className="text-sm text-muted-foreground">
+                    {testimonial.role}
+                  </div>
                 </div>
               </div>
             </div>
