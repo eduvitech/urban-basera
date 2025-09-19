@@ -10,6 +10,7 @@ import Layout from "./layout/layout";
 import DesignPage from "./pages/design/designPage";
 import BuyPage from "./pages/buy/BuyPage";
 import SellPage from "./pages/sell/sellPage";
+import AboutPage from "./pages/about/about";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
             <Route path="/design" element={<DesignPage />} />
             <Route path="/buy" element={<BuyPage />} />
             <Route path="/sell" element={<SellPage />} />
+            <Route path="/about-us" element={<AboutPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
