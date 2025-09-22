@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { Home, BadgeDollarSign, Ruler } from "lucide-react";
 
-import BuyImage from "@/assets/services/buy/buy.jpg";
-import SellImage from "@/assets/services/sell/sell.jpg";
-import cozyBedroom from "@/assets/cozy-bedroom.jpg";
+import BuyImage from "@/assets/services/buy/buy.webp";
+import SellImage from "@/assets/services/sell/sell.webp";
+import cozyBedroom from "@/assets/cozy-bedroom.webp";
 
 type Service = {
   id: "buy" | "sell" | "design";

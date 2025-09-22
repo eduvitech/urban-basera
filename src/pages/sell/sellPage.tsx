@@ -1,8 +1,8 @@
 import { ListChecks, Camera, Handshake, FileSignature, LifeBuoy } from "lucide-react";
 import { redirectWhatsApp } from "@/shared/helper";
 
-import card1 from "@/assets/services/sell/sell1.jpg";
-import card2 from "@/assets/services/sell/sell2.jpg";
+import card1 from "@/assets/services/sell/sell1.webp";
+import card2 from "@/assets/services/sell/sell2.webp";
 
 type Step = {
   step: string;

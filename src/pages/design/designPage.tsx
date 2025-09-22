@@ -1,11 +1,11 @@
-import img1 from "@/assets/services/design/design.jpg";
-import img2 from "@/assets/services/design/design1.jpg";
-import img3 from "@/assets/services/design/design2.jpg";
-import img4 from "@/assets/services/design/design3.jpg";
-import img5 from "@/assets/services/design/design4.jpg";
-import img6 from "@/assets/services/design/design5.jpg";
-import img7 from "@/assets/services/design/design6.jpg";
-import img8 from "@/assets/services/design/design7.jpg";
+import img1 from "@/assets/services/design/design.webp";
+import img2 from "@/assets/services/design/design1.webp";
+import img3 from "@/assets/services/design/design2.webp";
+import img4 from "@/assets/services/design/design3.webp";
+import img5 from "@/assets/services/design/design4.webp";
+import img6 from "@/assets/services/design/design5.webp";
+import img7 from "@/assets/services/design/design6.webp";
+import img8 from "@/assets/services/design/design7.webp";
 
 import heroVideo from "@/assets/videos/design/design.mp4";
 import { redirectWhatsApp } from "@/shared/helper";
