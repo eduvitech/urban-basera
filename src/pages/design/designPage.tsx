@@ -1,17 +1,17 @@
 import img1 from "@/assets/services/design/design.webp";
 import img2 from "@/assets/services/design/design1.webp";
 import img3 from "@/assets/services/design/design2.webp";
-import img4 from "@/assets/services/design/design3.webp";
 import img5 from "@/assets/services/design/design4.webp";
 import img6 from "@/assets/services/design/design5.webp";
 import img7 from "@/assets/services/design/design6.webp";
 import img8 from "@/assets/services/design/design7.webp";
+import img9 from "@/assets/services/design/design8.webp";
 
 import heroVideo from "@/assets/videos/design/design.mp4";
 import { redirectWhatsApp } from "@/shared/helper";
 
 const DesignPage = () => {
-  const gallery = [img1, img2, img3, img4, img5, img6, img7, img8];
+  const gallery = [img1, img2, img3, img5, img6, img7, img8,img9];
 
   return (
     <main className="bg-background text-foreground">
